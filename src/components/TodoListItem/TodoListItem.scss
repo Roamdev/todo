@@ -1,0 +1,89 @@
+.todo-list-item {
+  font-size: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  &-label{
+    margin-left: 1.25rem;
+    line-height: 35px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &--btn-panel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & button {
+    width: 35px;
+    margin: 3px;
+    float: right;
+  }
+}
+.done {
+  text-decoration: dashed;
+}
+
+.todo-list-item.done .todo-list-item-label {
+  text-decoration: line-through;
+}
+
+.todo-list-item.important .todo-list-item-label {
+  font-weight: bold;
+  color: steelblue;
+}
+
+@media (min-width: 300px) and (max-width: 360px) {
+  .todo-list-item{
+    &-label{
+      margin: 0;
+      font-size: 1rem;
+    }
+    &--btn-panel {
+      flex-direction: column;
+    }
+    button {
+      padding: .2rem .4rem;
+    }
+  }
+  .btn {
+    font-size: 1rem;
+  }
+  .add-item .btn{
+    padding: 0 5px;
+    font-size: .81rem;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 700px) {
+  .btn{
+    font-size: 1rem;
+  }
+  .todo-list-item{
+    &-label{
+      margin: 0;
+    }
+    &--btn-panel {
+      flex-direction: column;
+    }
+  }
+  .add-item .btn{
+    font-size: .8rem;
+    padding: 0 5px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1300px) {
+  .todo-list-item {
+    &-label{
+      font-size: 1.5rem;
+      margin: 0;
+    }
+  }
+}

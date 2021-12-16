@@ -1,0 +1,10 @@
+.add-item {
+  margin: 16px 0 5px;
+  display: flex;
+  &--input{
+    width: auto;
+    flex-grow: 1;
+    margin-right: 3px;
+    height: 38px;
+  }
+}
